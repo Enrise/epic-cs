@@ -1,0 +1,33 @@
+{
+    "name": "epic-cs",
+    "version": "0.1.0",
+    "description": "A Team EPIC tool for maintaining consistent code style setup across a variety of projects.",
+    "bin": {
+        "epic-cs": "./bin/epic-cs.js"
+    },
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Enrise/epic-cs.git"
+    },
+    "keywords": [
+        "style guide",
+        "code style",
+        "linting",
+        "lint",
+        "enrise"
+    ],
+    "author": "Team EPIC @Enrise <epic@enrise.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Enrise/epic-cs/issues"
+    },
+    "homepage": "https://github.com/Enrise/epic-cs#readme",
+    "dependencies": {
+        "handlebars": "^4.0.12",
+        "inquirer": "^6.2.0"
+    }
+}
