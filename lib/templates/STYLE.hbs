@@ -4,8 +4,24 @@ This project was setup with [epic-cs](https://github.com/Enrise/epic-cs).
 
 ## What has been setup
 
-{{#each files}}
-* {{this}}
+{{#each codeStyles}}
+{{#each this.codeStyleSetup}}
+* {{this.name}}
+{{/each}}
 {{/each}}
 
 ## Example commands
+
+{{#each codeStyles}}
+{{#each this.codeStyleSetup}}
+{{#if this.exampleCommands}}
+{{this.name}}
+{{/if}}
+{{#each this.exampleCommands}}
+* {{this.name}}: {{this.command}}
+{{/each}}
+{{#if this.exampleCommands}}
+
+{{/if}}
+{{/each}}
+{{/each}}
