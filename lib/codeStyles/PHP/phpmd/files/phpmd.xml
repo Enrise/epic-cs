@@ -1,0 +1,226 @@
+<ruleset name="basic-rules"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                      http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>mess detection</description>
+
+    <!-- Clean Code Rules -->
+    <rule ref="rulesets/cleancode.xml/BooleanArgumentFlag">
+        <priority>2</priority>
+    </rule>
+
+    <rule ref="rulesets/cleancode.xml/ElseExpression">
+        <priority>2</priority>
+    </rule>
+
+    <rule ref="rulesets/cleancode.xml/StaticAccess">
+        <priority>2</priority>
+    </rule>
+
+    <rule ref="rulesets/cleancode.xml/StaticAccess">
+        <priority>2</priority>
+    </rule>
+
+    <!-- Code Size Rules -->
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+        <priority>1</priority>
+        <properties>
+            <property name="reportLevel" value="20" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+        <priority>2</priority>
+        <properties>
+            <property name="reportLevel" value="10" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/ExcessiveMethodLength">
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="100" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/ExcessiveClassLength">
+        <priority>1</priority>
+        <properties>
+            <property name="minimum" value="1000" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/ExcessiveClassLength">
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="500" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/ExcessiveParameterList">
+        <priority>1</priority>
+        <properties>
+            <property name="minimum" value="10" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/ExcessiveParameterList">
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="8" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/ExcessivePublicCount">
+        <priority>1</priority>
+        <properties>
+            <property name="minimum" value="100" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/ExcessivePublicCount">
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="40" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/TooManyFields">
+        <priority>1</priority>
+        <properties>
+            <property name="maxfields" value="80" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/TooManyFields">
+        <priority>2</priority>
+        <properties>
+            <property name="maxfields" value="30" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/TooManyMethods">
+        <priority>1</priority>
+        <properties>
+            <property name="maxmethods" value="100" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/TooManyMethods">
+        <priority>2</priority>
+        <properties>
+            <property name="maxmethods" value="40" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/ExcessiveClassComplexity">
+        <priority>1</priority>
+        <properties>
+            <property name="maximum" value="100" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/codesize.xml/ExcessiveClassComplexity">
+        <priority>2</priority>
+        <properties>
+            <property name="maximum" value="50" />
+        </properties>
+    </rule>
+
+    <!-- Controversial (apparently) Rules -->
+    <rule ref="rulesets/controversial.xml/Superglobals">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/controversial.xml/CamelCaseClassName"> <!-- AKA PascalCase/camelCase -->
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/controversial.xml/CamelCasePropertyName"> <!-- AKA PascalCase/camelCase -->
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/controversial.xml/CamelCaseMethodName"> <!-- AKA PascalCase/camelCase -->
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/controversial.xml/CamelCaseParameterName"> <!-- AKA PascalCase/camelCase -->
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/controversial.xml/CamelCaseVariableName"> <!-- AKA PascalCase/camelCase -->
+        <priority>1</priority>
+    </rule>
+
+    <!-- Design Rules -->
+    <rule ref="rulesets/design.xml/ExitExpression">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/EvalExpression">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/GotoStatement">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/NumberOfChildren">
+        <priority>1</priority>
+        <properties>
+            <property name="minimum" value="10" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/design.xml/DepthOfInheritance">
+        <priority>1</priority>
+        <properties>
+            <property name="minimum" value="6" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/design.xml/CouplingBetweenObjects">
+        <priority>1</priority>
+        <properties>
+            <property name="minimum" value="50" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/design.xml/CouplingBetweenObjects">
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="40" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/design.xml/DevelopmentCodeFragment">
+        <priority>1</priority>
+    </rule>
+
+    <!-- Naming Rules -->
+    <rule ref="rulesets/naming.xml/ShortVariable">
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="1" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/naming.xml/LongVariable">
+        <priority>1</priority>
+        <properties>
+            <property name="maximum" value="50" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/naming.xml/ShortMethodName">
+        <priority>2</priority>
+        <properties>
+            <property name="minimum" value="1" />
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/naming.xml/ConstantNamingConventions">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/naming.xml/BooleanGetMethodName">
+        <priority>1</priority>
+    </rule>
+
+    <!-- Default Unused Code Rules -->
+    <rule ref="rulesets/unusedcode.xml" />
+</ruleset>
