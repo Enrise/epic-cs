@@ -1,0 +1,27 @@
+# Style Guide
+
+This project was setup with [epic-cs](https://github.com/Enrise/epic-cs) version {{version}} at {{creationDate}}.
+
+## What has been setup
+
+{{#each codeStyles}}
+{{#each this.codeStyleSetup}}
+* {{this.name}}
+{{/each}}
+{{/each}}
+
+## Setup details
+
+{{#each codeStyles}}
+{{#each this.codeStyleSetup}}
+{{#if this.setupDetails}}
+#### {{this.name}}
+{{/if}}
+{{#each this.setupDetails}}
+* {{this.name}}: {{{this.detail}}}
+{{/each}}
+{{#if this.setupDetails}}
+
+{{/if}}
+{{/each}}
+{{/each}}
