@@ -1,6 +1,6 @@
 {
     "name": "epic-cs",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A Team EPIC tool for maintaining consistent code style setup across a variety of projects.",
     "bin": {
         "epic-cs": "./bin/epic-cs.js"
