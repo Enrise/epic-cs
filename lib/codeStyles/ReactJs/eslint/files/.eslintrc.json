@@ -5,12 +5,20 @@
         "es6": true,
         "jasmine": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
     "parser": "babel-eslint",
-    "plugins": [
-        "jasmine"
-    ]
+    "plugins": ["jasmine", "prettier"],
+    "rules": {
+        "prettier/prettier": "error",
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "never"
+            }
+        ]
+    }
 }
