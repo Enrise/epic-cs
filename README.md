@@ -19,3 +19,10 @@ epic-cs
 Then select the setup options you wish to apply to that directory.
 
 The tool will copy over any relevant setup files and create a STYLE.md file containing example commands to run.
+
+To run your local version as if it was globally installed, run:
+
+```shell
+$ cd ./bin
+$ npm link epic-cs
+```
