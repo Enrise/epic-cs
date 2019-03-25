@@ -1,0 +1,13 @@
+imports:
+- { resource: '%vendor_dir%/symplify/easy-coding-standard/config/clean-code.yml' }
+- { resource: '%vendor_dir%/symplify/easy-coding-standard/config/psr12.yml' }
+
+services:
+  PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
+  PhpCsFixer\Fixer\Strict\StrictComparisonFixer: ~
+  PhpCsFixer\Fixer\Strict\StrictParamFixer: ~
+  PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer: ~
+
+parameters:
+  exclude_files:
+  - 'vendor/*'
